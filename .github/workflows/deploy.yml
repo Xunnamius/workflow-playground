@@ -142,7 +142,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0 # ? Codecov action needs access to all history
           ref: ${{ needs.metadata.outputs.commit-sha }}
@@ -208,7 +208,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           fetch-depth: 0 # ? semantic-release needs access to all history
           ref: ${{ needs.metadata.outputs.commit-sha }}

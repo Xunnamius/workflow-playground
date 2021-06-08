@@ -72,7 +72,7 @@ jobs:
     steps:
       - name: Download metadata artifact
         if: github.event.workflow_run.conclusion == 'success'
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v4.0.2
         with:
           # ? Unfortunately, we can't use the official action to download
           # ? artifacts across workloads, so we do it manually
@@ -157,7 +157,7 @@ jobs:
         run: find -maxdepth 1 -not -name . -not -name .git -exec rm -rf {} +
 
       - name: Download build artifact
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v4.0.2
         with:
           # ? Unfortunately, we can't use the official action to download
           # ? artifacts across workloads, so we do it manually
@@ -223,7 +223,7 @@ jobs:
         run: find -maxdepth 1 -not -name . -not -name .git -exec rm -rf {} +
 
       - name: Download build artifact
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v4.0.2
         with:
           # ? Unfortunately, we can't use the official action to download
           # ? artifacts across workloads, so we do it manually
@@ -317,7 +317,7 @@ jobs:
 
     steps:
       - name: 'Merge pull request'
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.2
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |

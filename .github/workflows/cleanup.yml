@@ -113,7 +113,7 @@ jobs:
           }}@github.com/".insteadOf ssh://git@github.com/
 
       - name: Use node ${{ env.NODE_CURRENT_VERSION }}
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: ${{ env.NODE_CURRENT_VERSION }}
 

@@ -255,7 +255,7 @@ jobs:
           ! [ -z "$DEBUG" ] && ls -la || true
 
       - name: Use node ${{ needs.metadata.outputs.node-version }} (for npx only)
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: ${{ needs.metadata.outputs.node-version }}
 
